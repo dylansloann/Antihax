@@ -81,7 +81,7 @@ git clone https://github.com/dylansloann/Antihax.git
 ```
 2. Extract Files
 
-3. Install modules below
+3. Install modules in Built With
 
 3. Run antivirus.py
 
