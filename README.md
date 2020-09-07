@@ -58,7 +58,7 @@ I advanced on myself. The password manager was deisgened by Rohan Viswanathan.
 
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This includes the main languages/modules that were used.
 * [Python](https://jquery.com)
 * [PyQt5](https://pypi.org/project/PyQt5/)
 * [Tkinter](https://docs.python.org/3/library/tkinter.html)
