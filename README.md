@@ -21,14 +21,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/dylansloann/Antihax">
     <img src="code/logo2.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Antihax</h3>
 
   <p align="center">
-    A simple virus protection software.
+     A simple virus protection software.
 
 
 <!-- TABLE OF CONTENTS -->
@@ -54,7 +54,7 @@ I advanced on myself. The password manager was deisgened by Rohan Viswanathan.
 ### Features
 * Offers a full scan of any specified directory and subdirectories for most common viruses.
 * Provides a fully functional password manager.
-* Can perform a fill backup of any specified directory and subdirectories.
+* Can perform a full backup of any specified directory and subdirectories.
 
 
 ### Built With
