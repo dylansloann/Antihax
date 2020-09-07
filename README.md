@@ -22,7 +22,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="code/logo.png" alt="Logo" width="80" height="80">
+    <img src="code/logo2.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Antihax</h3>
@@ -120,4 +120,4 @@ Project Link: [https://github.com/dylansloann/Antihax](https://github.com/dylans
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/GUIexample.png
+[product-screenshot]: photos/GUIexample.png
