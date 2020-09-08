@@ -419,6 +419,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.passwordbutton.setIcon(QtGui.QIcon("passicon.png"))
         self.passwordbutton.setStyleSheet("background-color : white")
         self.passwordbutton.setObjectName("passwordbutton")
+        self.passwordbutton.clicked.connect(self.show_popup4)
 
         self.backupbutton = QtWidgets.QPushButton(self.leftframe)
         self.backupbutton.setGeometry(QtCore.QRect(32, 110, 90, 30))
@@ -495,29 +496,32 @@ class Ui_MainWindow(QtWidgets.QWidget):
 
 
     def show_popup(self):
-        path = QtWidgets.QInputDialog.getText(self, 'Scanning', 'Enter your path: ') 
+        path = QtWidgets.QInputDialog.getText(self, 'Scanning', 'Enter your path:                                                                                                                     ') 
         if path[0] == '':
             return 0;
         dirs = os.listdir(path[0])
-        print(path[0])
         for root, dirs, files in os.walk(path[0]):
             for f in files:
                 try:
                     pathsingle = os.path.join(root, f)
-                    matches = rules.match("'" + pathsingle + "'")
+                    test = os.path.abspath(pathsingle)
+                    matches = rules.match(test)
                 except:
                     continue
                 if matches != []:
-                    answer = QtWidgets.QInputDialog.getText(self, 'Delete File?', 'Please type Y/N:') 
-                    if (answer == "Y"):
-                        os.remove(f)
-                        return 0;
+                    answer = QtWidgets.QInputDialog.getText(self, "Virus Found! " + test, 'Please type Y/N:                                                                                                                     ')
+                    if (answer[0] == "Y"):
+                        os.remove(test)
+                        matches = []
+                        continue
+                    else:
+                    	continue
                 if matches == []:
-                    return 0;
+                    continue
 
     def show_popup2(self):
-        src = QtWidgets.QInputDialog.getText(self, 'Source', 'Enter your path to perform backup: ')
-        dest = QtWidgets.QInputDialog.getText(self, 'Destination', 'Enter your destination (will create dir.): ')
+        src = QtWidgets.QInputDialog.getText(self, 'Source', 'Enter your path to perform backup:                                                                                                                     ')
+        dest = QtWidgets.QInputDialog.getText(self, 'Destination', 'Enter your destination (will create dir.):                                                                                                                     ')
         print(src[0], dest[0])
         if (src[0] or dest[0]) == '':
             return 0;
