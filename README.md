@@ -102,7 +102,9 @@ Contributions are **greatly appreciated**. Would love to take this software even
 <!-- CONTACT -->
 ## Contact
 
-Your Name - dylansloann2@gmail.com
+Name - Dylan Sloan (TAMU '23)
+
+Email - dylansloann2@gmail.com
 
 Project Link: [https://github.com/dylansloann/Antihax](https://github.com/dylansloann/Antihax)
 
