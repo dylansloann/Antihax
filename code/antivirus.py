@@ -14,7 +14,7 @@ from PyQt5.QtWidgets import QMessageBox
 import sys, os, yara, shutil
 import tkinter as tk
 
-
+# compliles all rules for detecting malware
 rules = yara.compile(filepaths={
 
     'namespace1':r'./malware/000_common_rules.yar',
@@ -360,7 +360,7 @@ rules = yara.compile(filepaths={
 
 })
 
-
+# GUI Setup
 class Ui_MainWindow(QtWidgets.QWidget):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -368,7 +368,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
-
+        # setup and all objects presented in left frame
         self.leftframe = QtWidgets.QFrame(self.centralwidget)
         self.leftframe.setGeometry(QtCore.QRect(0, 19, 161, 541))
 
@@ -377,6 +377,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.leftframe.setStyleSheet("background-color: #511617;")
         self.leftframe.setObjectName("leftframe")
 
+        # lines used for seperation of button and frames
         self.line = QtWidgets.QFrame(self.leftframe)
         self.line.setGeometry(QtCore.QRect(0, 190, 161, 20))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
@@ -407,6 +408,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_5.setObjectName("line_5")
 
+        # setup of butttons along with click redirect
         self.scanbutton = QtWidgets.QPushButton(self.leftframe)
         self.scanbutton.setGeometry(QtCore.QRect(32, 10, 90, 30))
         self.scanbutton.setIcon(QtGui.QIcon("scanicon.png"))
@@ -440,6 +442,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.est.setStyleSheet("color : #191919")
         self.est.setObjectName("est")
 
+        # setup and all objects presented in Right frame
         self.rightframe = QtWidgets.QFrame(self.centralwidget)
         self.rightframe.setGeometry(QtCore.QRect(159, -1, 641, 561))
         self.rightframe.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -464,6 +467,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.label.setStyleSheet('color: #8F8E8E') 
         self.label.setObjectName("label")
 
+        # setup of small frame for Secure Connection tab
         self.smallframe = QtWidgets.QFrame(self.centralwidget)
         self.smallframe.setGeometry(QtCore.QRect(0, 0, 159, 21))
         self.smallframe.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -494,18 +498,18 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-
+    # setup of malware searching function
     def show_popup(self):
         path = QtWidgets.QInputDialog.getText(self, 'Scanning', 'Enter your path:                                                                                                                     ') 
         if path[0] == '':
             return 0;
         dirs = os.listdir(path[0])
         for root, dirs, files in os.walk(path[0]):
-            for f in files:
+            for f in files:  # Obtains paths of all files in directory and subdirectories
                 try:
                     pathsingle = os.path.join(root, f)
                     test = os.path.abspath(pathsingle)
-                    matches = rules.match(test)
+                    matches = rules.match(test)  # NOTE: check inputted file for any matches to compiled YARA rules
                 except:
                     continue
                 if matches != []:
@@ -519,6 +523,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
                 if matches == []:
                     continue
 
+    #  setup of backup function
     def show_popup2(self):
         src = QtWidgets.QInputDialog.getText(self, 'Source', 'Enter your path to perform backup:                                                                                                                     ')
         dest = QtWidgets.QInputDialog.getText(self, 'Destination', 'Enter your destination (will create dir.):                                                                                                                     ')
@@ -532,6 +537,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
     def popup_button(self, i):
         print(i.text())
 
+    # setup of about function
     def show_popup3(self):
         msg = QMessageBox()
         msg.setWindowTitle("About")
@@ -542,6 +548,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
          "Includes Password Manager, and ability to perform backups from any directory")
         x = msg.exec_()
 
+    # setup of password manager function
     def show_popup4(self):
         msg = QMessageBox()
         msg.setWindowTitle("Seperate Software")
@@ -550,6 +557,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         msg.setText ("Unfortunalty our password manager is not included in our main, but you can easily access it by downloading the file on our website. :")
         x = msg.exec_()
 
+    # redefines TXT display for certain for certain elements
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "AntiHax"))
@@ -561,6 +569,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.label.setText(_translate("MainWindow", "Dylan Sloan, Rohan Viswanathan, Reed Billedo, Jackson Engel"))
         self.securecon.setText(_translate("MainWindow", "SECURE CONNECTION"))
 
+# main code
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
