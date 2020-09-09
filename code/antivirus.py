@@ -500,7 +500,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
 
     # setup of malware searching function
     def show_popup(self):
-        path = QtWidgets.QInputDialog.getText(self, 'Scanning', 'Enter your path:                                                                                                                     ') 
+        path = QtWidgets.QInputDialog.getText(self, 'Scanning', 'Enter your path: ')                                                                                                                    ') 
         if path[0] == '':
             return 0;
         dirs = os.listdir(path[0])
