@@ -49,7 +49,8 @@
 [![Product Name Screen Shot][product-screenshot]]
 
 This was an entry for Howdy Hack 2020. This is a more complete and simplified version
-I advanced on myself. The password manager was designed by Rohan Viswanathan.
+I advanced on myself. 
+The password manager was designed by Rohan Viswanathan.
 
 ### Features
 * Offers a full scan of any specified directory and subdirectories for most common viruses.
