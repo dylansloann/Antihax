@@ -48,7 +48,7 @@
 
 [![Product Name Screen Shot][product-screenshot]]
 
-This was an entry for Howdy Hack 2020. This is a more complete and simplified version
+This was our entry for Howdy Hack 2020. This is a more complete and simplified version
 I advanced on. 
 The password manager was designed by Rohan Viswanathan.
 
