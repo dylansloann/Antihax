@@ -101,4 +101,4 @@ Project Link: [https://github.com/dylansloann/Antihax](https://github.com/dylans
 
 [product-screenshot]: photos/GUIexample.png
 [product-screenshot2]: photos/ScanExample.png
-[product-screenshot3]: photos/pass2exmaple.png
+[product-screenshot3]: photos/pass2example.png
