@@ -28,6 +28,7 @@
 
 [![Product Name Screen Shot][product-screenshot]]
 
+
 This was our entry for Howdy Hack 2020. This is a more complete and simplified version
 I advanced on. 
 The password manager was designed by Rohan Viswanathan who also assisted on debugging main GUI.
@@ -42,9 +43,13 @@ Live Link - [https://dylansloann.github.io/Antihax/](https://dylansloann.github.
 * Can perform a full backup of any specified directory and subdirectories.
 
 
+
+
 [![Product Name Screen Shot][product-screenshot2]]
 
+
 [![Product Name Screen Shot][product-screenshot3]]
+
 
 
 ### Built With
