@@ -38,7 +38,7 @@ The backup feature was asisssted on by Jackson Engel who also assisted on debugg
 Live Link - [https://dylansloann.github.io/Antihax/](https://dylansloann.github.io/Antihax/)
 
 ### Features
-* Offers a full scan of any specified directory and subdirectories for most common viruses.
+* Offers a full scan of any specified directory and subdirectories for most common viruses. 
 * Provides a fully functional password manager.
 * Can perform a full backup of any specified directory and subdirectories.
 
