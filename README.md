@@ -26,7 +26,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+![Product Name Screen Shot][product-screenshot]
 
 
 This was our entry for Howdy Hack 2020. This is a more complete and simplified version
@@ -45,10 +45,10 @@ Live Link - [https://dylansloann.github.io/Antihax/](https://dylansloann.github.
 
 
 
-[![Product Name Screen Shot][product-screenshot2]]
+![Product Name Screen Shot][product-screenshot2]
 
 
-[![Product Name Screen Shot][product-screenshot3]]
+![Product Name Screen Shot][product-screenshot3]
 
 
 
