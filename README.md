@@ -29,8 +29,7 @@
 [![Product Name Screen Shot][product-screenshot]]
 
 
-This was our entry for Howdy Hack 2020. This is a more complete and simplified version
-I advanced on. 
+This was our entry for Howdy Hack 2020.
 The password manager was designed by Rohan Viswanathan who also assisted on debugging main GUI.
 The Website provided below was designed by Reed Billedo.
 The backup feature was asisssted on by Jackson Engel who also assisted on debugging of multiple parts.
